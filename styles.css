@@ -1,0 +1,141 @@
+/* Typos Lexend Deca et Big Shoulders */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+/* Couleurs */
+/* Design global */
+--gold-500: hsl(31, 77%, 52%);
+--cyan-800: hsl(184, 100%, 22%);
+--green-950: hsl(179, 100%, 13%);
+/*Transparent white (paragraphs)*/
+--transparent-white: hsla(0, 0%, 100%, 0.75);
+
+/*Background, headings, buttons*/
+--gray-100: hsl(0, 0%, 95%);
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--gray-100); */
+    background-color: #77aa77;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+}
+
+.card-container {
+    display: flex;
+    max-width: 1100px;
+    background-color: white;
+    padding: 100px;
+    border-radius: 8px;
+ 
+}
+
+.card {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.card img {
+    width: 75px;
+}
+
+.card h2 {
+    font-family: 'Big Shoulders', sans-serif;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--transparent-white);
+}
+
+.card a {
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 40px;
+    background-color: var(--transparent-white);
+    font-weight: bold;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card a:hover {
+    background-color: white;
+    transform: scale(1.10);
+}
+
+.card-sedans {
+background-color: var(--gold-500);
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+}
+
+.card-sedans a {
+    color: var(--gold-500);
+}
+
+.card-suvs {
+    background-color: var(--cyan-800);
+}
+
+.card-suvs a {
+    color: var(--cyan-800);
+}
+
+.card-luxury {
+    background-color: var(--green-950);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card-luxury a {
+    color: var(--green-950);
+}
+
+/* Mobile */
+
+@media  screen and (max-width: 800px) {
+
+    body {
+        background-image: none;
+        background-color: white;
+    }
+    .card-container {
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .card-sedans {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0;
+        }
+
+        .card-luxury {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            }
+    
+}
